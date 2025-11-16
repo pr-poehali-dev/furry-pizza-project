@@ -25,10 +25,9 @@ const Index = () => {
   ];
 
   const team = [
-    { name: 'Лиса Лариса', role: 'Шеф-повар', specialty: 'Специалист по итальянским рецептам' },
-    { name: 'Медведь Миша', role: 'Пиццайоло', specialty: 'Мастер тонкого теста' },
-    { name: 'Кот Василий', role: 'Су-шеф', specialty: 'Эксперт по начинкам' },
-    { name: 'Кролик Роджер', role: 'Курьер', specialty: 'Быстрая доставка' },
+    { name: 'Лис Семён', role: 'Шеф-повар', specialty: 'Специалист по итальянским рецептам', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/4eb0ee67-aa80-4a50-a633-fd96c00cb3ed.jpg' },
+    { name: 'Волк Николай', role: 'Пиццайоло', specialty: 'Мастер тонкого теста', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/ae37760f-e066-4294-a55c-cb3d367d2cb5.jpg' },
+    { name: 'Кот Григорий', role: 'Су-шеф', specialty: 'Эксперт по начинкам', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/96a84b2a-ea43-4aaf-a4b0-3aac893afd37.jpg' },
   ];
 
   const promos = [
@@ -94,7 +93,7 @@ const Index = () => {
             </div>
             <div className="animate-fade-in relative">
               <img 
-                src="https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/d742c322-b5f1-4775-89d9-667d5845ad8a.jpg" 
+                src="https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/934bea50-b90a-434f-8b5c-91895860a5ef.jpg" 
                 alt="Фурри Пицца"
                 className="rounded-3xl shadow-2xl hover-scale"
               />
@@ -255,7 +254,7 @@ const Index = () => {
               'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/047cb8ff-55bf-4bb0-a7a1-a273654174b6.jpg',
               'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/a8a06961-d161-4a0e-bd88-605f99ce9bec.jpg',
               'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/bdde4d50-5edd-4be1-aa22-7051a9d54614.jpg',
-              'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/d742c322-b5f1-4775-89d9-667d5845ad8a.jpg',
+              'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/934bea50-b90a-434f-8b5c-91895860a5ef.jpg',
               'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/afa938cf-b58f-48f7-b41d-a261179f56a7.jpg'
             ].map((imgUrl, i) => (
               <div key={i} className="relative h-64 rounded-2xl overflow-hidden hover-scale group cursor-pointer">
@@ -279,13 +278,13 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Наша команда</h2>
             <p className="text-xl text-muted-foreground">Познакомьтесь с нашими талантливыми поварами</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {team.map((member, i) => (
               <Card key={i} className="text-center hover-scale">
                 <CardHeader>
                   <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                     <img 
-                      src="https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/6ba3bdfc-8902-418f-a4be-a7edd68030aa.jpg"
+                      src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover"
                     />
