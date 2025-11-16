@@ -12,12 +12,16 @@ const Index = () => {
   const [formData, setFormData] = useState({ name: '', phone: '', address: '', comment: '' });
 
   const menuItems = [
-    { id: 1, name: 'Маргарита', price: 450, category: 'Классические', description: 'Томатный соус, моцарелла, базилик', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/afa938cf-b58f-48f7-b41d-a261179f56a7.jpg' },
-    { id: 2, name: 'Пепперони', price: 550, category: 'Мясные', description: 'Пепперони, моцарелла, томатный соус', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/afa938cf-b58f-48f7-b41d-a261179f56a7.jpg' },
-    { id: 3, name: 'Четыре сыра', price: 600, category: 'Сырные', description: 'Моцарелла, горгонзола, пармезан, чеддер', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/afa938cf-b58f-48f7-b41d-a261179f56a7.jpg' },
-    { id: 4, name: 'Мясная', price: 650, category: 'Мясные', description: 'Говядина, курица, бекон, колбаски', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/afa938cf-b58f-48f7-b41d-a261179f56a7.jpg' },
-    { id: 5, name: 'Вегетарианская', price: 500, category: 'Овощные', description: 'Томаты, перец, грибы, маслины', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/afa938cf-b58f-48f7-b41d-a261179f56a7.jpg' },
-    { id: 6, name: 'Гавайская', price: 550, category: 'Специальные', description: 'Курица, ананас, моцарелла', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/afa938cf-b58f-48f7-b41d-a261179f56a7.jpg' },
+    { id: 1, name: 'Маргарита', price: 450, category: 'Классические', description: 'Томатный соус, моцарелла, базилик', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/12e8b4d3-dbfc-41a8-b953-f71b827b8218.jpg' },
+    { id: 2, name: 'Пепперони', price: 550, category: 'Мясные', description: 'Пепперони, моцарелла, томатный соус', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/c68fe53b-ae40-4013-a42d-b6a90259113d.jpg' },
+    { id: 3, name: 'Четыре сыра', price: 600, category: 'Сырные', description: 'Моцарелла, горгонзола, пармезан, чеддер', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/57fa25e9-e007-4e88-9cd2-1648f88f93a5.jpg' },
+    { id: 4, name: 'Мясная', price: 650, category: 'Мясные', description: 'Говядина, курица, бекон, колбаски', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/91b6be94-50ed-44ec-b1c6-fe64d91ecf39.jpg' },
+    { id: 5, name: 'Вегетарианская', price: 500, category: 'Овощные', description: 'Томаты, перец, грибы, маслины', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/2957b147-0a4b-4ecc-a70a-cfd664d4f9d4.jpg' },
+    { id: 6, name: 'Гавайская', price: 550, category: 'Специальные', description: 'Курица, ананас, моцарелла', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/a8fe5bc7-2ada-4891-b5d3-a33fa8f76b27.jpg' },
+    { id: 7, name: 'Морская', price: 750, category: 'Морепродукты', description: 'Креветки, мидии, кальмары, лимон', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/db7e6d07-c933-45da-9575-4475451bbffb.jpg' },
+    { id: 8, name: 'BBQ Курица', price: 650, category: 'Мясные', description: 'Курица гриль, BBQ соус, лук, кинза', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/047cb8ff-55bf-4bb0-a7a1-a273654174b6.jpg' },
+    { id: 9, name: 'Дьявольская', price: 600, category: 'Острые', description: 'Острая салями, перец чили, моцарелла', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/a8a06961-d161-4a0e-bd88-605f99ce9bec.jpg' },
+    { id: 10, name: 'Трюфельная', price: 850, category: 'Премиум', description: 'Белые грибы, трюфельное масло, руккола', image: 'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/bdde4d50-5edd-4be1-aa22-7051a9d54614.jpg' },
   ];
 
   const team = [
@@ -150,15 +154,15 @@ const Index = () => {
               </p>
               <div className="grid grid-cols-3 gap-4 mt-8">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary">150+</div>
+                  <div className="text-4xl font-bold text-primary">10+</div>
                   <div className="text-sm text-muted-foreground">Видов пицц</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary">5 лет</div>
+                  <div className="text-4xl font-bold text-primary">15 минут</div>
                   <div className="text-sm text-muted-foreground">На рынке</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary">10k+</div>
+                  <div className="text-4xl font-bold text-primary">5</div>
                   <div className="text-sm text-muted-foreground">Довольных гостей</div>
                 </div>
               </div>
@@ -211,7 +215,7 @@ const Index = () => {
             <Card className="text-center hover-scale">
               <CardHeader>
                 <Icon name="Clock" className="mx-auto text-primary mb-4" size={48} />
-                <CardTitle>30-40 минут</CardTitle>
+                <CardTitle>30-40 часов</CardTitle>
                 <CardDescription>Среднее время доставки по городу</CardDescription>
               </CardHeader>
             </Card>
@@ -219,7 +223,7 @@ const Index = () => {
               <CardHeader>
                 <Icon name="MapPin" className="mx-auto text-primary mb-4" size={48} />
                 <CardTitle>Зона доставки</CardTitle>
-                <CardDescription>В радиусе 10 км от ресторана</CardDescription>
+                <CardDescription>В радиусе 10 световых лет от ресторана</CardDescription>
               </CardHeader>
             </Card>
             <Card className="text-center hover-scale">
@@ -240,11 +244,24 @@ const Index = () => {
             <p className="text-xl text-muted-foreground">Наши блюда и атмосфера</p>
           </div>
           <div className="grid md:grid-cols-3 gap-4">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
+            {[
+              'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/12e8b4d3-dbfc-41a8-b953-f71b827b8218.jpg',
+              'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/c68fe53b-ae40-4013-a42d-b6a90259113d.jpg',
+              'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/57fa25e9-e007-4e88-9cd2-1648f88f93a5.jpg',
+              'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/91b6be94-50ed-44ec-b1c6-fe64d91ecf39.jpg',
+              'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/2957b147-0a4b-4ecc-a70a-cfd664d4f9d4.jpg',
+              'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/a8fe5bc7-2ada-4891-b5d3-a33fa8f76b27.jpg',
+              'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/db7e6d07-c933-45da-9575-4475451bbffb.jpg',
+              'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/047cb8ff-55bf-4bb0-a7a1-a273654174b6.jpg',
+              'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/a8a06961-d161-4a0e-bd88-605f99ce9bec.jpg',
+              'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/bdde4d50-5edd-4be1-aa22-7051a9d54614.jpg',
+              'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/d742c322-b5f1-4775-89d9-667d5845ad8a.jpg',
+              'https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/afa938cf-b58f-48f7-b41d-a261179f56a7.jpg'
+            ].map((imgUrl, i) => (
               <div key={i} className="relative h-64 rounded-2xl overflow-hidden hover-scale group cursor-pointer">
                 <img 
-                  src={i === 1 ? "https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/d742c322-b5f1-4775-89d9-667d5845ad8a.jpg" : "https://cdn.poehali.dev/projects/f0b86b69-d08e-44b8-b98e-408bed5f9ddc/files/afa938cf-b58f-48f7-b41d-a261179f56a7.jpg"}
-                  alt={`Gallery ${i}`}
+                  src={imgUrl}
+                  alt={`Gallery ${i + 1}`}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -432,7 +449,12 @@ const Index = () => {
                 <Button variant="outline" size="icon" className="bg-transparent border-background/30 hover:bg-background/10">
                   <Icon name="Facebook" size={20} />
                 </Button>
-                <Button variant="outline" size="icon" className="bg-transparent border-background/30 hover:bg-background/10">
+                <Button 
+                  variant="outline" 
+                  size="icon" 
+                  className="bg-transparent border-background/30 hover:bg-background/10"
+                  onClick={() => window.open('https://t.me/kulyori', '_blank')}
+                >
                   <Icon name="Send" size={20} />
                 </Button>
               </div>
